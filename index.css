@@ -1,0 +1,25 @@
+header{
+    background-color: gold;
+    height: 65px;
+    width: 100%;
+}
+.header-left{
+    float:left;
+    padding: 10px;
+}
+.header-right{
+    float: right;
+    text-align: center;
+    padding-right: 10px;
+    color: white;
+}
+.main{
+    background-image: url("#");
+    text-align: center;
+    margin: 100px;
+    font-size: 45px;
+}
+footer{
+    background-color: aqua;
+    
+}
