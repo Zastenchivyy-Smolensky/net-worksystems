@@ -1,10 +1,11 @@
 header{
-    background-color: gold;
+    background-color: #155260;
+    color: #fff;
+    opacity: 0.6;
     height: 65px;
     width: 100%;
 }
 .header-left{
-    float:left;
     padding: 10px;
 }
 .header-right{
@@ -13,22 +14,41 @@ header{
     padding-right: 10px;
     color: white;
 }
+.header-right p{
+    float: left;
+    padding: 10px;
+}
+.header-right a{
+    color: #fff;
+}
+.container1{
+    color: white;
+    background-image: url("istockphoto-1250084185-1024x1024.jpg");
+}
 .main{
-    background-image: url("#");
+    opacity: 0.7;
     text-align: center;
     margin: 100px;
     font-size: 45px;
 }
 footer{
-    background-color: aqua;
-    height: 150px;
-    width: 100%;
+    background-color: #14414e;
+    height: 350px;
     color: white;
-
 }
+
 .left{
     float: left;
+    font-size: 16px;
+    padding-top: 50px;
+    padding-left: 40px;
+}
+.right li{
+    float:left;
+    list-style: none;
+    padding: 10px;
+    padding-bottom:20px;
 }
 .right{
-    float:right;
+    float: right;
 }
