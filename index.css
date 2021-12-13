@@ -21,5 +21,14 @@ header{
 }
 footer{
     background-color: aqua;
-    
+    height: 150px;
+    width: 100%;
+    color: white;
+
+}
+.left{
+    float: left;
+}
+.right{
+    float:right;
 }
