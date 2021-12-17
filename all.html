@@ -1,14 +1,3 @@
-<?php
-    $cid = mysqli_connect("vm2-db.sys.fit.ac.jp","common","***");
-    mysqli_select_db($cid, "db_common");
-    if(mysqli_connect_errno()){
-    printf("Fail: %s\n", mysqli_connect_error());
-    }
-    $sql = "select * from apps;";
-    $res = mysqli_query($cid,$sql);
-    $num = mysqli_num_rows($res);
-    echo "<p>{$num}件のデータが登録されています。</p>";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,27 +16,21 @@
                 <p><a href="update.php">修正</a></p>
             </div>
             <div class="header-left">
-                <a href="index.html"><h2>${User}</h2></a>
+                <a href="index.html"><h2></h2></a>
             </div>
         </div>
     </header>
-
-    <div class="container1">
-        <table>
-            <tr>
-                <th>画像</th>
-                <th>タイトル</th>
-                <th>技術</th>
-            </tr>
-            <?php 
-            foreach($apps as $app):
-            ?>
-            
-            <?php endforeach?>
-        </table>
+    <div class="check-form">
+        <div class="container">
+            <form action="all.php">
+                <h1>制作物アプリ検索欄</h1>
+                <label>検索:</label>
+                <input type="text">
+                <input type="submit" value="検索">
+            </form>
+        </div>
     </div>
 
-    
 
     <footer>
         <div class="footer-container">
