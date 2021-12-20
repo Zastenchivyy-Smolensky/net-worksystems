@@ -2,6 +2,8 @@
 <?php
     $apps=$_POST;
     
+
+    
     if(empty($apps["file"])){
         exit('ファイルを添付してください');
     }
