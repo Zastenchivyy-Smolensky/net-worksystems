@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="create.css">
 </head>
 <body>
     <header>
@@ -20,22 +21,22 @@
             </div>
         </div>
     </header>
-    
-    <form action="add.php" method="post">
-        <label>画像</label>
-        <input type="file" name="file">
-        <label>アプリ題名</label>
-        <input type="text" name="title">
-        <label>技術(プログラミング言語)</label>
-        <textarea name="tech" cols="30" rows="10"></textarea>
+    <div class="form">
+    <form action="create.php" method="post">
+        <label>画像</label><br>
+        <input type="file" name="file"> <br>
+        <label>アプリ題名</label><br>
+        <input type="text" name="title"><br>
+        <label>技術(プログラミング言語)</label><br>
+        <textarea name="tech" cols="30" rows="10"></textarea><br>
 
-        <h2>なぜ作ろうとしたのか</h2>
-        <textarea name="why" class="why-why"></textarea>
-        <h2>こだわり</h2>
-        <textarea name="a1"></textarea>
-        <button>投稿</button>
+        <h2>なぜ作ろうとしたのか</h2><br>
+        <textarea name="why" class="why-why"></textarea><br>
+        <h2>こだわり</h2><br>
+        <textarea name="a1"></textarea><br>
+        <button>投稿</button><br>
     </form>
-
+</div>
     
 
     <footer>
