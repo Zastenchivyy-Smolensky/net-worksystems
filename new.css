@@ -1,0 +1,26 @@
+header{
+    text-align: center;
+    color: white;
+}
+h1{
+    background-color: aqua;
+    font-size: 40px;
+}
+.new{
+    text-align: center;
+} 
+.new input{
+    margin: 40px;
+}
+footer{
+    background-color: aquamarine;
+    height: 190px;
+}
+.footer-right{
+    float: right;
+    margin-top:50px;
+}
+.footer-right li{
+    list-style:none; 
+    
+}
