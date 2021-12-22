@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-    require("update.html");
+    require("create.html");
     $file=$_POST["file"];
     $title=$_POST["title"];
     $giturl=$_POST["giturl"];
