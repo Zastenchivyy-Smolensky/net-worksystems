@@ -14,17 +14,24 @@
     </header>
     <h3>データを入力してください</h3>
     <div class="form">
-    <form action="update.php" method="post">
-    <label>画像ファイル:</label> <br>
-    <input type="file" name="file"> <br>
-    <label>技術(プログラミング言語)</label> <br>
-    <input type="text" name="tech"> <br>
-    <label>なぜ作ろうとしたのか?</label> <br>
-    <textarea name="why" cols="30" rows="10"></textarea> <br>
-    <label>こだわり</label><br>
-    <textarea name="a1" cols="30" rows="10"></textarea> <br>
-    <input type="submit">
-    </form>
+        <form action="update.php" method="post">
+            <label>アプリの画像</label><br>
+            <input type="file" name="file"> <br>
+            <label>アプリ題名</label><br>
+            <input type="text" name="title"><br>
+            <p>githubのURL</p>
+            <input type="text" name="giturl"><br>
+            <p>リンク</p>
+            <input type="text" name="link"><br>
+            <label>技術(プログラミング言語)</label><br>
+            <textarea name="tech" cols="30" rows="10"></textarea><br>
+            <h2>なぜ作ろうとしたのか</h2><br>
+            <textarea name="why"  cols="30" rows="10" class="why-why"></textarea><br>
+            <h2>こだわり</h2><br>
+            <textarea name="a1" cols="30" rows="10"></textarea><br>
+            
+            <button>投稿</button><br>
+        </form>
     </div>
     <footer>
         <div class="footer-container">

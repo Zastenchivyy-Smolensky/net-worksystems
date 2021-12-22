@@ -15,14 +15,13 @@
         $name=$_POST["name"];
         $mail=$_POST["email"];
         $password=$_POST["password"];
-        $repassword=$_POST["repassword"];
         echo "サインイン完了しました"; 
         ?>
         <br>
         <?php
         $cid=mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
         mysqli_select_db($cid,"db_common");
-        $sql= "Insert into STUDENT values ('{$name}','{$mail}','{$password}','{$repassword}')";
+        $sql= "Insert into Users values ('{$name}','{$mail}','{$password}')";
         $res=mysqli_query($cid, $sql);
         mysqli_close($cid);
         ?>
