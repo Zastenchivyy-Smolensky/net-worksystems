@@ -28,11 +28,10 @@
     
         <?php
         require("new.html");
-        
+        session_start();
         $name=$_POST["name"];
         $mail=$_POST["email"];
         $password=$_POST["password"];
-        echo "サインイン完了しました"; 
         ?>
         <br>
         <?php
@@ -43,22 +42,20 @@
         mysqli_close($cid);
         ?>
         <?php
-          if (isset($_SESSION["error_status"])) {
-            if ($_SESSION["error_status"] == 1) {
-              echo "<h2 style='color:red;'>入力内容に誤りがあります。</h2>";
-            }
-            if ($_SESSION["error_status"] == 2) {
-              echo "<h2 style='color:red;'>IDは既に登録されています。</h2>";
-            }
-            if ($_SESSION["error_status"] == 3) {
-              echo "<h2 style='color:red;'>タイムアウトか不正な URL です。</h2>";
-            }
-            if ($_SESSION["error_status"] == 4) {
-              echo "<h2 style='color:red;'>登録に失敗しました。</h2>";
-            }
-            if ($_SESSION["error_status"] == 5) {
-              echo "<h2 style='color:red;'>パスワードは既に登録されています。</h2>";
-            }
+          if(!$mail=filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
+            echo "入力が不正です";
+            return false;
+          }
+          if(preg_match('/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}+\z/i', $_POST['password'])){
+            $password=password_hash($_POST["password"],PASSWORD_DEFAULT);
+          }else{
+            echo "パスワードは半角英数字を祖それぞれ1文字以上8文字以上で設定してください";
+            return false;
+          }
+          try{
+            echo "登録完了です";
+          }catch(Exception $e){
+            echo "登録済みのメールアドレスです.";
           }
         ?>
     
