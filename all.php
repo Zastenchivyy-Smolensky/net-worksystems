@@ -20,7 +20,7 @@ $num = mysqli_num_rows($res);
 <header>
         <div class="container">
             <div class="header-right">
-                <p><a href="index.html">logout</a></p>
+                <p><a href="logout.php">logout</a></p>
                 <p><a href="create.php">投稿</a></p>
             </div>
             <div class="header-left">
