@@ -8,10 +8,10 @@
 </head>
 <body>
     <?
-        require("index.html");
-        $title=$_POST["title"];
+        require("app/index.html");
+        require("app/all.php");
+        
         echo "このプロダクトを削除します";
-
         $cid=mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
         mysqli_select_db($cid,"db_common");
         $sql="delete from Users where title='{$title}';";
