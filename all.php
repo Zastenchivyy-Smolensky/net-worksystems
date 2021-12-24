@@ -45,7 +45,7 @@ while($row = mysqli_fetch_array($res))
 {
 ?>
   <tr>
-    <td><a href="read.html" method="get"><?=htmlspecialchars($row["title"]) ?></a></td>
+    <td><a href="read.php?title=<?php echo $row["title"]?>" name="title" method="get"><?=htmlspecialchars($row["title"]) ?></a></td>
     <td><?=htmlspecialchars($row["giturl"]) ?></td>
     <td><?=htmlspecialchars($row["link"]) ?></td>
   </tr>

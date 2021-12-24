@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php
+    
     require("create.html");
     $file=$_POST["file"];
     $title=$_POST["title"];
@@ -18,11 +19,16 @@
     $a1=$_POST["a1"];
 
 
-    
+
     $cid=mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
     mysqli_select_db($cid,"db_common");
     $sql="insert into Apps values('{$file}','{$title}','{$giturl}','{$link}','{$tech}','{$why}','{$a1}');";
     $res=mysqli_query($cid,$sql);
+    if($res){
+        echo "投稿が成功しました";
+    }else{
+        echo "失敗しました";
+    }
     mysqli_close($cid);
     ?>
 </body>
