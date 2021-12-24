@@ -41,23 +41,6 @@
         $res=mysqli_query($cid, $sql);
         mysqli_close($cid);
         ?>
-        <?php
-          if(!$mail=filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
-            echo "入力が不正です";
-            return false;
-          }
-          if(preg_match('/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}+\z/i', $_POST['password'])){
-            $password=password_hash($_POST["password"],PASSWORD_DEFAULT);
-          }else{
-            echo "パスワードは半角英数字を祖それぞれ1文字以上8文字以上で設定してください";
-            return false;
-          }
-          try{
-            echo "登録完了です";
-          }catch(Exception $e){
-            echo "登録済みのメールアドレスです.";
-          }
-        ?>
     
     
 </body>

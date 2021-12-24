@@ -16,6 +16,6 @@ session_destroy();
     
     <h1>ログアウトしました</h1>
     <p><a href="login.html">ログインする</a></p>
-    <a href=""></a>
+    <a href="index.html">ホーム画面</a>
 </body>
 </html>

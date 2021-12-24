@@ -9,7 +9,6 @@
 <body>
 <?php
     require("login.html");
-    session_start();
     $name=$_POST["name"];
     $mail=$_POST["email"];
     $password=$_POST["password"];
