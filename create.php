@@ -18,6 +18,7 @@
     $a1=$_POST["a1"];
 
 
+    
     $cid=mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
     mysqli_select_db($cid,"db_common");
     $sql="insert into Apps values('{$file}','{$title}','{$giturl}','{$link}','{$tech}','{$why}','{$a1}');";
