@@ -36,8 +36,6 @@ mysqli_close($cid);
     <br>
     <h3>こだわり:<?php echo $row["al"]?></h3>
 
-    <form action="delete.php">
-        <input type="submit" value="削除">
-    </form>
+    <a href="update.html">編集ページへ</a>
 </body>
 </html>
