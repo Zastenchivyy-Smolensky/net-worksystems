@@ -9,6 +9,7 @@
 <body>
     <?
         
+        
         require("delete.html");
         $title=$_POST["title"];
         $cid=mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
