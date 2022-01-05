@@ -17,7 +17,7 @@
     
     $res=mysqli_query($cid,$sql);
     $num = mysqli_num_rows($res);
-    mysqli_close($cid);
+    
     
     while($ma=mysqli_fetch_array($res)){
     if($ma["name"]==$name){
