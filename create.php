@@ -26,6 +26,7 @@
     $res=mysqli_query($cid,$sql);
     if($res){
         echo "投稿が成功しました";
+        header("Location: all.php");
     }else{
         echo "失敗しました";
     }
