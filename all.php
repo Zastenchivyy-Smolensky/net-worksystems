@@ -43,6 +43,8 @@
                 <td>アプリ名</td>
                 <td>GitHubのリンク</td>
                 <td>公開したアプリリンク</td>
+                <td>削除</td>
+                <td>修正</td>
             </tr>
         <?php
         while($row = mysqli_fetch_array($res))
@@ -53,6 +55,7 @@
         <td><?=htmlspecialchars($row["giturl"]) ?></td>
         <td><?=htmlspecialchars($row["link"]) ?></td>
         <td><a href="delete.php?title=<?php echo $row["title"]?>" method="get">削除</a></td>
+        <td><a href="update.html?title=<?php echo $row["title"]?>" method="get">修正</a></td>
     </tr>
     <?php
     }

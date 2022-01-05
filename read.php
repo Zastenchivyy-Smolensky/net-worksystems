@@ -1,21 +1,21 @@
-<?php
+    <?php
 
 
 
-$title=$_GET["title"];
-if(empty($title)){
-    exit("まだ登録されていません");
-}
-$cid=mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
-mysqli_select_db($cid,"db_common");
-$sql="select * from Apps where $title=title";
-$res=mysqli_query($cid,$sql);
-$row = mysqli_fetch_array($res);
-if(!$row){
-    exit("ありません");
-}
-mysqli_close($cid);
-?>
+    $title=$_GET["title"];
+    if(empty($title)){
+        exit("まだ登録されていません");
+    }
+    $cid=mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
+    mysqli_select_db($cid,"db_common");
+    $sql="select * from Apps where $title=title";
+    $res=mysqli_query($cid,$sql);
+    $row = mysqli_fetch_array($res);
+    if(!$row){
+        exit("ありません");
+    }
+    mysqli_close($cid);
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,19 +23,44 @@ mysqli_close($cid);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>詳細ページ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body>
-    <h3>詳細ページ</h3>
-    <h3>画像:<?php echo $row["file"]?></h3>
-    <h3>アプリ名:<?php echo $row["title"]?></h3>
-    <h3>GithubのURL:<?php echo $row["giturl"]?></h3>
-    <h3>Link:<?php echo $row["link"]?></h3>
-    <h3>使用した技術:<?php echo $row["tech"]?></h3>
-    <br>
-    <h3>なぜ開発したのか:<?php echo $row["why"]?></h3>
-    <br>
-    <h3>こだわり:<?php echo $row["al"]?></h3>
+<body class="container">
+    <h3 class="display-4 text-primary" >詳細ページ</h3>
+    <table class="table">
+        <tr>
+            <th>画像</th>
+            <th><?php echo $row["file"]?></th>
+        </tr>
+        <tr>
+            <th>アプリ名</th>
+            <th><?php echo $row["title"]?></th>
+        </tr>
+        <tr>
+            <th>GithhubのURL</th>
+            <th><?php echo $row["giturl"]?></th>
+        </tr>
+        <tr>
+            <th>リンク</th>
+            <th><?php echo $row["link"]?></th>
+        </tr>
+        <tr>
+            <th>使用した技術</th>
+            <th><?php echo $row["tech"]?></th>
+        </tr>
+        <tr>
+            <th>開発したきっかけ</th>
+            <th><?php echo $row["why"]?></th>
+        </tr>
+        <tr>
+            <th>こだわり</th>
+            <th><?php echo $row["al"]?></th>
+        </tr>
+            
+    </table>
+    
 
     <a href="update.html">編集ページへ</a>
+    <a href="all.php">戻る</a>
 </body>
 </html>
