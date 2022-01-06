@@ -7,6 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="create.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
 </head>
 <body>
     <header>
@@ -22,11 +25,12 @@
         </div>
     </header>
     <div class="form">
+        <h1 class="display-4 text-primary">投稿ページ</h1>
     <form action="create.php" method="post">
         <label>学籍番号の下4桁</label><br>
         <input type="nubber" name="id"><br>
         <label>アプリの画像</label><br>
-        <input type="file" name="file"> <br>
+        <input type="file" name="file" class="fas fa-images"><br>
         <label>アプリ題名</label><br>
         <input type="text" name="title"><br>
         <p>githubのURL</p>
@@ -40,7 +44,7 @@
         <h2>こだわり</h2><br>
         <textarea name="a1" cols="30" rows="10"></textarea><br>
         
-        <button>投稿</button><br>
+        <button class="btn btn-primary mt-2">投稿</button><br>
     </form>
 </div>
     
