@@ -28,19 +28,19 @@
         <h1 class="display-4 text-primary">投稿ページ</h1>
     <form action="create.php" method="post">
         <label>学籍番号の下4桁</label><br>
-        <input type="nubber" name="id"><br>
+        <input type="number" name="id"><br>
         <label>アプリの画像</label><br>
         <input type="file" name="file" class="fas fa-images"><br>
         <label>アプリ題名</label><br>
-        <input type="text" name="title"><br>
+        <input class="form-control" type="text" name="title"><br>
         <p>githubのURL</p>
-        <input type="text" name="giturl"><br>
+        <input class="form-control" type="text" name="giturl"><br>
         <p>リンク</p>
-        <input type="text" name="link"><br>
+        <input class="form-control" type="text" name="link"><br>
         <label>技術(プログラミング言語)</label><br>
         <textarea name="tech" cols="30" rows="10"></textarea><br>
         <h2>なぜ作ろうとしたのか</h2><br>
-        <textarea name="why"  cols="30" rows="10" class="why-why"></textarea><br>
+        <textarea name="why"  cols="30" rows="10" class="why"></textarea><br>
         <h2>こだわり</h2><br>
         <textarea name="a1" cols="30" rows="10"></textarea><br>
         
