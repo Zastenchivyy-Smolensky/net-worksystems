@@ -1,14 +1,11 @@
     <?php
-
-
-
-    $title=$_GET["title"];
-    if(empty($title)){
+    $id=$_GET["id"];
+    if(empty($id)){
         exit("まだ登録されていません");
     }
     $cid=mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
     mysqli_select_db($cid,"db_common");
-    $sql="select * from Apps where $title=title";
+    $sql="select * from Apps where $id=id";
     $res=mysqli_query($cid,$sql);
     $row = mysqli_fetch_array($res);
     if(!$row){
@@ -26,6 +23,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body class="container">
+    
     <h3 class="display-4 text-primary" >詳細ページ</h3>
     <table class="table">
         <tr>
@@ -54,7 +52,7 @@
         </tr>
         <tr>
             <th>こだわり</th>
-            <th><?php echo $row["al"]?></th>
+            <th><?php echo $row["a1"]?></th>
         </tr>
             
     </table>

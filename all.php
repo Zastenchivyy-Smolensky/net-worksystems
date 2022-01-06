@@ -51,11 +51,11 @@
         {
         ?>
     <tr>
-        <td><a href="read.php?title=<?php echo $row["title"]?>" name="title" method="get"><?=htmlspecialchars($row["title"]) ?></a></td>
+        <td><a href="read.php?id=<?php echo $row["id"]?>" name="title" method="get"><?=htmlspecialchars($row["title"]) ?></a></td>
         <td><?=htmlspecialchars($row["giturl"]) ?></td>
         <td><?=htmlspecialchars($row["link"]) ?></td>
-        <td><a href="delete.php?title=<?php echo $row["title"]?>" method="get">削除</a></td>
-        <td><a href="update.html?title=<?php echo $row["title"]?>" method="get">修正</a></td>
+        <td><a href="delete.php?id=<?php echo $row["id"]?>" method="get">削除</a></td>
+        <td><a href="update.html?id=<?php echo $row["id"]?>" method="get">修正</a></td>
     </tr>
     <?php
     }
