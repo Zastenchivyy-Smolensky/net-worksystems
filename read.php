@@ -4,7 +4,7 @@
         exit("まだ登録されていません");
     }
     $cid=mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
-    mysqli_select_db($cid,"db_common");
+    mysqli_select_db($cid,"db_s001");
     $sql="select * from Apps where $id=id";
     $res=mysqli_query($cid,$sql);
     $row = mysqli_fetch_array($res);

@@ -29,6 +29,7 @@
         <?php
         require("new.html");
         session_start();
+        $id=$_POST["id"];
         $name=$_POST["name"];
         $mail=$_POST["email"];
         $password=$_POST["password"];
@@ -36,10 +37,11 @@
         <br>
         <?php
         $cid=mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
-        mysqli_select_db($cid,"db_common");
-        $sql= "Insert into Users values ('{$name}','{$mail}','{$password}')";
+        mysqli_select_db($cid,"db_s001");
+        $sql= "Insert into Users values ('{$id}','{$name}','{$mail}','{$password}')";
         $res=mysqli_query($cid, $sql);
         mysqli_close($cid);
+
         ?>
     
     

@@ -12,7 +12,7 @@
     $mail=$_POST["email"];
     $password=$_POST["password"];
     $cid=mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
-    mysqli_select_db($cid,"db_common");
+    mysqli_select_db($cid,"db_s001");
     $sql="select * from Users";
     
     $res=mysqli_query($cid,$sql);
@@ -22,7 +22,7 @@
     while($ma=mysqli_fetch_array($res)){
     if($ma["name"]==$name){
         if($ma["mail"]==$mail){
-            if($ma["passport"]==$password){
+            if($ma["password"]==$password){
                 echo "ログイン完了しました";
                 header("Location: all.php");
                 exit;
