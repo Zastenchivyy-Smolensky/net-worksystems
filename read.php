@@ -26,10 +26,7 @@
     
     <h3 class="display-4 text-primary" >詳細ページ</h3>
     <table class="table">
-        <tr>
-            <th>画像</th>
-            <th><?php echo $row["file"]?></th>
-        </tr>
+        
         <tr>
             <th>アプリ名</th>
             <th><?php echo $row["title"]?></th>

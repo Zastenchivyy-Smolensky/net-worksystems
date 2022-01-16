@@ -11,7 +11,6 @@
     
     require("create.html");
     $id=$_POST["id"];
-    $file=$_POST["file"];
     $title=$_POST["title"];
     $giturl=$_POST["giturl"];
     $link=$_POST["link"];

@@ -27,6 +27,7 @@ header{
     background-image: url("original.jpeg");
     background-size: cover;
     padding: 180px 0 80px 0;
+    height: 150px;
 }
 
 .main{
@@ -49,12 +50,7 @@ table{
     height: 90px;
 
 }
-footer{
-    background-color: #14414e;
-    color: white;
-    padding: 90px;
-    height: 90px;
-}
+
 
 .left{
     float: left;
@@ -69,6 +65,4 @@ footer{
 .right{
     float: right;
 }
-footer{
-    position: absolute;
-}
+

@@ -31,10 +31,8 @@
     <div class="check-form">
         <div class="container">
             <form action="all.php">
-                <h1 class="display-4 text-primary" >制作物アプリ検索欄</h1>
-                <label>検索:</label>
-                <input type="text">
-                <input type="submit" class="btn btn-primary" value="検索">
+                <h1 class="display-4 text-primary" >制作物アプリ一覧画面</h1>
+                
             </form>
         </div>
     </div>
@@ -55,27 +53,13 @@
         <td><?=htmlspecialchars($row["giturl"]) ?></td>
         <td><?=htmlspecialchars($row["link"]) ?></td>
         <td><a href="delete.php?id=<?php echo $row["id"]?>" method="get">削除</a></td>
-        <td><a href="update.html?id=<?php echo $row["id"]?>" method="get">修正</a></td>
+        <td><a href="update1.php?id=<?php echo $row["id"]?>" method="get">修正</a></td>
     </tr>
     <?php
     }
     mysqli_close($cid);
     ?>
 </table>
-<footer>
-        <div class="footer-container">
-            <div class="left">
-                <h1>情報ネットワークシステム</h1>
-            </div>
-            <div class="right">
-                <ul>
-                    <li>情報システム工学科</li>
-                    <li>20c2007</li>
-                    <li>影山亮太</li>
-                </ul>
-            </div>
-            
-        </div>
-    </footer>
+
 </body>
 </html>
