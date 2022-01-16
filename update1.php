@@ -22,30 +22,32 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="create.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <h1>データをアップロードする</h1>
+        <h1 class="display-4 text-primary">編集ページ</h1>
     </header>
-    <h3>データを入力してください</h3>
     <div class="form">
         <form action="update.php" method="post">
             
-            <label>アプリ題名</label><br>
-            <input type="text" name="title" value=<?php echo $row["title"] ?>><br>
-            <p>githubのURL</p>
-            <input type="text" name="giturl" value=<?php echo $row["giturl"]?>><br>
-            <p>リンク</p>
-            <input type="text" name="link" value=<?php echo $row["link"]?>><br>
-            <label>技術(プログラミング言語)</label><br>
-            <textarea name="tech" cols="30" rows="10"><?php echo $row["tech"]?></textarea><br>
-            <h2>なぜ作ろうとしたのか</h2><br>
-            <textarea name="why"  cols="30" rows="10" class="why-why"><?php echo $row["why"]?></textarea><br>
-            <h2>こだわり</h2><br>
-            <textarea name="a1" cols="30" rows="10"><?php echo $row["a1"]?></textarea><br>
-            
-            <button>投稿</button><br>
+            <table class="table">
+                <div class="container mt-3">
+                <label>アプリ名</label><br>
+                <input class="form-control" type="text" name="title" value=<?php echo $row["title"] ?>><br>
+                <p>githubのURL</p>
+                <input class="form-control" type="text" name="giturl" value=<?php echo $row["giturl"]?>><br>
+                <p>リンク</p>
+                <input class="form-control" type="text" name="link" value=<?php echo $row["link"]?>><br>
+                <label>技術(プログラミング言語)</label><br>
+                <textarea name="tech" class="form-control" aria-label="With textarea"><?php echo $row["tech"]?></textarea><br>
+                <h2>なぜ作ろうとしたのか</h2><br>
+                <textarea name="why"  class="form-control" aria-label="With textarea"><?php echo $row["why"]?></textarea><br>
+                <h2>こだわり</h2><br>
+                <textarea name="a1" class="form-control" aria-label="With textarea"><?php echo $row["a1"]?></textarea><br>
+                </div>
+                    <input type="submit" value="編集" class="btn btn-primary mt-2">
+            </table>
         </form>
     </div>
 </body>
