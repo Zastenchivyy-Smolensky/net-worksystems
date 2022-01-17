@@ -33,8 +33,7 @@
         header("Location: login.html" );
     }
 }
-    
-    
+
     ?>
     
     
