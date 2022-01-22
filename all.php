@@ -6,7 +6,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-
 <?php
     $cid = mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
     mysqli_select_db($cid, "db_s001");
