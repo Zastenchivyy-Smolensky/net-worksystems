@@ -32,7 +32,7 @@
             <th><?php echo $row["title"]?></th>
         </tr>
         <tr>
-            <th>GithhubのURL</th>
+            <th>GithubのURL</th>
             <th><?php echo $row["giturl"]?></th>
         </tr>
         <tr>

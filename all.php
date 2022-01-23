@@ -9,9 +9,9 @@
 <?php
     $cid = mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
     mysqli_select_db($cid, "db_s001");
-    if(mysqli_connect_errno()){
-    printf("Fail: %s\n", mysqli_connect_error());
-    }
+    // if(mysqli_connect_errno()){
+    //     printf("Fail: %s\n", mysqli_connect_error());
+    // }
     $sql = "select * from Apps;";
     $res = mysqli_query($cid,$sql);
     $num = mysqli_num_rows($res);
