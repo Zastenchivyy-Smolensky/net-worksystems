@@ -8,7 +8,6 @@
 </head>
 <body>
     <?
-        
         $id=$_GET["id"];
         $cid=mysqli_connect("vm2-db.sys.fit.ac.jp","common","ensyu2@Jnet");
         mysqli_select_db($cid,"db_s001");
